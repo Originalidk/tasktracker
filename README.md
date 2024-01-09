@@ -19,7 +19,10 @@ An application that helps you manage your tasks.
 
 ## Set up backend
 
-1. Inside the tasktracker directory, set up a .env file with your postgresql database's details: ![Example of .env file](./env.png)
+1. Inside the tasktracker directory, set up a .env file with your postgresql database's details (use the same environment variable names):
+
+![Example of .env file](./env.png)
+
 2. To setup the frontend, checkout the README.md file in the client directory
 
 ## Running / Development
