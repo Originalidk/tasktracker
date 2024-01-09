@@ -13,5 +13,5 @@ The client folder represents the frontend of this application. It was generated 
 
 ## Running / Development
 
-1. To run the frontend, run the command `npm start` inside your client directory (Loading the website might take a while).
+1. To run the frontend, run the command `npm start` inside your client directory (loading the website might take a while).
 2. Visit your app at [http://localhost:4200](http://localhost:4200).
