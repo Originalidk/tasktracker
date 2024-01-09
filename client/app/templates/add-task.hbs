@@ -1,0 +1,10 @@
+<main class="add-task-container">
+    <BsForm class="form" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+      <form.element @controlType="text" @label="Title" @placeholder="Title" @property="title" @required={{true}} />
+      <form.element @controlType="text" @label="Description" @placeholder="Description" @property="description" @required={{true}} />
+      <form.element @controlType="radio" @label="Status" @property="status" @options={{radioOptions}} @optionLabelPath="label" />
+      <form.element @controlType="text" @label="Due Date" @placeholder="DueDate" @property="dueDate" @required={{true}} @helpText="Must be in format DD/MM/YYYY" />
+      <form.element @controlType="text" @label="Time" @placeholder="Time" @property="time" @required={{true}} @helpText="Must be in format HHmm" />
+      <form.submitButton>Submit</form.submitButton>
+    </BsForm>
+</main>

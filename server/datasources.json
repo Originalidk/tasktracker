@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "tasktrackerdb": {
+    "host": "TASKTRACKER_DB_HOST",
+    "port": "TASKTRACKER_DB_PORT",
+    "url": "",
+    "database": "TASKTRACKER_DB_DATABASE",
+    "password": "TASKTRACKER_DB_PASSWORD",
+    "name": "TASKTRACKER_DB_NAME",
+    "user": "TASKTRACKER_DB_USER",
+    "connector": "postgresql"
+  }
+}

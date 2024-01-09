@@ -1,0 +1,5 @@
+<main class="container mt-5">
+    {{#each model as |task|}}
+        <TaskItem class="task" @id={{task.id}} @title={{task.title}} @description={{task.description}} @status={{task.status}} @dueDate={{task.dueDate}} @authorId={{task.authorId}} />
+    {{/each}}
+</main>

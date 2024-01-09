@@ -1,0 +1,34 @@
+<main class="container" class="task">
+    <div class="task">
+        <div class="details">
+            <div class="title-desc">
+                <h2>{{@title}}</h2>
+                <p class="description">Description: {{@description}}</p>
+            </div>
+            <div class="task-buttons">
+              <BsDropdown as |dd|>
+                <dd.button class="status-button">
+                  {{#if this.status}}
+                    {{this.status}}
+                  {{else}}
+                    {{@status}}
+                  {{/if}}
+                  <span class="caret"></span>
+                </dd.button>
+                <dd.menu as |menu|>
+                  {{#each dropdownItems as |item|}}
+                    <div class="status-option" {{action changeStatus item @id on="click"}}>
+                       {{item}}
+                    </div>
+                  {{/each}}
+                </dd.menu>
+              </BsDropdown>
+              <BsButton @type="success" @onClick={{action editTask @authorId @id}}>Edit</BsButton>
+              <BsButton @type="danger" @onClick={{action deleteTask @id}}>Delete</BsButton>
+            </div>
+        </div>
+        <div class="dueDate">
+            <h5>Due: {{formatDateTime @dueDate}}</h5>
+        </div>
+    </div>
+</main>

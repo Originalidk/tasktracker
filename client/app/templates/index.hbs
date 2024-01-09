@@ -1,0 +1,7 @@
+<main class="add-task-container">
+    <h1> Sign Up </h1>
+    <BsForm class="form" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+      <form.element @controlType="text" @label="Name" @placeholder="Name" @property="name" @required={{true}} />
+      <form.submitButton>Submit</form.submitButton>
+    </BsForm>
+</main>

@@ -1,0 +1,9 @@
+<main class="add-task-container">
+    <h1>Edit Name / Delete Account</h1>
+    <h6>(Current name: {{model}})</h6>
+    <BsForm class="form" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+      <form.element @controlType="text" @label="Name" @placeholder="Name" @property="name" @required={{true}} />
+      <form.submitButton>Submit</form.submitButton>
+      <BsButton @type="danger" @onClick={{action deleteAuthor}}>Delete Account</BsButton>
+    </BsForm>
+</main>

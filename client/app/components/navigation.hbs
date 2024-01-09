@@ -1,0 +1,42 @@
+<BsNavbar
+  @type="light"
+  @backgroundColor="rgb(184, 63, 63)"
+  @collapsed={{true}}
+  @onCollapse={{action (mut collapsed) true}}
+  @onExpand={{action (mut collapsed) false}} as |navbar|>
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    <h1 class="navbar-title">Task Tracker</h1>
+  </div>
+  <navbar.content>
+    <navbar.nav as |nav|>
+      {{#if navbarFunctions.onLogin}}
+        <BsButton @type="light" class="navbar-button" @onClick={{action navbarFunctions.indexPage}}>Sign Up</BsButton>
+      {{else}}
+        {{#if navbarFunctions.onIndex}}
+            <BsButton @type="light" class="navbar-button" @onClick={{action navbarFunctions.loginPage}}>Login</BsButton>
+        {{else}}
+            <nav.dropdown class="navbar-button" as |dd|>
+              <dd.toggle>Account <span class="caret"></span></dd.toggle>
+              <dd.menu class="dropdown-menu-right" as |ddm|>
+                <ddm.item>
+                    <ddm.link-to @route="author" @model={{navbarFunctions.authorId}} @onClick={{navbarFunctions.updateAuthorId}}>edit account</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                    <ddm.link-to @route="tasks" @model={{navbarFunctions.authorId}} @onClick={{navbarFunctions.updateAuthorId}}>view tasks</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                    <ddm.link-to @route="add-task" @model={{navbarFunctions.authorId}} @onClick={{navbarFunctions.updateAuthorId}}>add task</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                  <div {{action navbarFunctions.loginPage on="click"}}>
+                    <ddm.link-to @route="login" @onClick={{navbarFunctions.loginPage}}>logout</ddm.link-to>
+                  </div>
+                </ddm.item>
+              </dd.menu>
+            </nav.dropdown>
+        {{/if}}
+      {{/if}}
+    </navbar.nav>
+  </navbar.content>
+</BsNavbar>

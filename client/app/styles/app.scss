@@ -1,0 +1,81 @@
+@import "ember-bootstrap/bootstrap";
+
+body {
+    background-color: rgb(231, 231, 231);
+}
+
+.navbar {
+    background-color: rgb(184, 63, 63);
+}
+
+.navbar-header {
+    width: 92.5%
+}
+
+.navbar-title {
+    color: white
+}
+
+.navbar-button {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.task {
+    height: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: content-box;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.details {
+    height: 90%;
+}
+
+.title-desc {
+    width: 75%;
+    float: left;
+}
+
+.description {
+    text-wrap: break-word;
+}
+
+.dueDate {
+    height: 10%;
+}
+
+.task-buttons {
+    flex-grow: 1;
+    float: right;
+}
+
+.status-option {
+    cursor: pointer;
+}
+
+.status-button {
+    background-color: rgb(63, 95, 184);
+}
+
+.form {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.add-task-container {
+    min-height: 500px;
+    min-width: 500px;
+    height: 60vh;
+    width: 55vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
