@@ -19,9 +19,8 @@ An application that helps you manage your tasks.
 
 ## Set up backend
 
-1. Run `npm i` to install all dependencies in the package.json file
-2. Inside the tasktracker directory, set up a .env file with your postgresql database's details: ![Example of .env file](./env.png)
-3. To setup the frontend, checkout the README.md file in the client directory
+1. Inside the tasktracker directory, set up a .env file with your postgresql database's details: ![Example of .env file](./env.png)
+2. To setup the frontend, checkout the README.md file in the client directory
 
 ## Running / Development
 1. To run the backend, run the command `npm run dev` inside your tasktracker directory
